@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Em construção, volte em breve...</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Início</title>
+	<link href="css/style2.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <div class="loading">
-        <img src="images/loading.gif">
-        <p>Em construção...</p>
-    </div>
+	<header>
+		<a href="#" class="name">Matheus Henrique Vitor</a>
+		<ul>
+			<li><a href="#">Início</a></li>
+			<li><a href="#">Sobre</a></li>
+			<li><a href="#">Projetos</a></li>
+			<li><a href="#">Currículo</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</header>
+	<section class="banner"></section>
+
+	<script type="text/javascript">
+		window.addEventListener("scroll", function() {
+			var header = document.querySelector("header");
+			header.classList.toggle("sticky", window.scrollY > 0);
+		})
+	</script>
 </body>
 </html>
