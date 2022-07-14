@@ -1,16 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 :root {
     --black: #000000;
     --white: #FFFFFF;
     --green: #00FF00;
-    --blue: #00aaff;
+    --blue: #ff0000;
     --bgImage: url('images/gif.gif');
 }
 
 body {
     font-family: monospace;
-    background: var(--bgColor);
+    background: var(--bgColor); 
+    margin: 0;
+}
+
+.light-theme {
+    transition: 0.6s;
+    --bgColor: var(--white);
+    --headerBg: var(--black);
+    --headerTextColor: var(--black);
+    --headerHoverColor: var(--blue);
+    --stickyTextColor: var(--white);
+    --btnTextColor: var(--green);
+    --btnBorderColor: var(--green);
+    --btnBgColor: var(--black);
+}
+
+.dark-theme {
+    transition: 0.6s;
+    --bgColor: var(--black);
+    --headerBg: var(--white);
+    --headerTextColor: var(--white);
+    --headerHoverColor: var(--green);
+    --stickyTextColor: var(--black);
+    --btnTextColor: var(--blue);
+    --btnBorderColor: var(--blue);
+    --btnBgColor: var(--white);
 }
 
 header {
@@ -18,19 +44,35 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
     z-index: 100000;
+}
+
+
+
+header.sticky {
     background: var(--headerBg);
+}
+
+header.sticky #title a,
+header.sticky .menu a {
+    color: var(--stickyTextColor);
+}
+
+header.sticky #title a:hover,
+header.sticky .menu a:hover {
+    color: var(--headerHoverColor);
 }
 
 #title {
     position: relative;
-    left: 100px;
+    left: 50px;
     font-family: Oswald;
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.6s;
@@ -38,14 +80,14 @@ header {
 
 #title a {
     text-decoration: none;
-    color: var(--titleColor);
+    color: var(--headerTextColor);
     transition: 0.6s;
 }
 
 #title:hover,
 #title a:hover {
     transform: scale(1.1);
-    color: var(--titleHoverColor);
+    color: var(--headerHoverColor);
 }
 
 ul {
@@ -58,7 +100,7 @@ ul {
 .menu {
     position: relative;
     left: 500px;
-    font-size: 25px;
+    font-size: 2em;
     font-weight: 100;
     margin: 0 15px;
     list-style: none;
@@ -66,7 +108,7 @@ ul {
 }
 
 .menu a {
-    color: var(--menuColor);
+    color: var(--headerTextColor);
     text-decoration: none;
     transition: 0.6s;
 }
@@ -74,17 +116,17 @@ ul {
 .menu:hover,
 .menu a:hover {
     transform: scale(1.1);
-    color: var(--menuHoverColor);
+    color: var(--headerHoverColor);
 }
 
 .btn {
     position: relative;
     right: 100px;
-    width: 100px;
-    height: 100px;
+    width: 3em;
+    height: 3em;
     border: solid 3px;
     border-radius: 100%;
-    font-size: 30px;
+    font-size: 2em;
     font-weight: bold;
     font-family: Oswald;
     text-transform: uppercase;
@@ -99,28 +141,100 @@ ul {
     background: var(--btnBgColor);
 }
 
-.light-theme {
-    transition: 0.6s;
-    --bgColor : var(--white);
-    --headerBg : none;
-    --titleColor : var(--black);
-    --titleHoverColor: var(--blue);
-    --menuColor : var(--black);
-    --menuHoverColor : var(--blue);
-    --btnTextColor: var(--green);
-    --btnBorderColor: var(--green);
-    --btnBgColor: var(--black);
+.banner {
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    height: 960px;
+    width: 100%;
 }
 
-.dark-theme {
+.banner .bgvid {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#name {
+    position: relative;
+    bottom: 25px;
     transition: 0.6s;
-    --bgColor : var(--black);
-    --headerBg : none;
-    --titleColor : var(--white);
-    --titleHoverColor: var(--green);
-    --menuColor : var(--white);
-    --menuHoverColor : var(--green);
-    --btnTextColor: var(--blue);
-    --btnBorderColor: var(--blue);
-    --btnBgColor: var(--white);
+    cursor: default;
+    font-family: Oswald; 
+    font-weight: 900;
+    text-transform: uppercase;
+    color: --headerTextColor;
+    font-size: 3em;
+    text-shadow: 0px 0px 10px var(--headerHoverColor);
+}
+
+#name:hover {
+    transform: scale(1.1);
+}
+
+#prof {
+    cursor: default;
+    transition: 0.6s;
+    position: relative;
+    bottom: 85px;
+    font-family: Orbitron;
+    color: var(--white);
+    font-size: 1.5em;
+    text-shadow: 1px 1px 5px var(--black);
+}
+
+#prof:hover {
+    transform: scale(1.1);
+}
+
+#myself-image {
+    transition: 0.6s;
+    background: url('images/myself.jpeg');
+    background-size: cover;
+    background-position: center center;
+    border: solid 5px;
+    border-radius: 100%;
+    border-color: var(--headerHoverColor);
+    width: 350px;
+    height: 350px;
+}
+
+#myself-image:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    transition: 0.6s;
+    position: relative;
+    top: 1400px;
+    width: 100%;
+    height: 50px;
+    background: var(--bgColor);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.copyright p {
+    transition: 0.6s;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--headerTextColor);
 }
