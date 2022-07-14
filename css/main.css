@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --green: #00FF00;
+    --blue: #00aaff;
+    --bgImage: url('images/gif.gif');
+}
+
+body {
+    font-family: monospace;
+    background: var(--bgColor);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 100000;
+    background: var(--headerBg);
+}
+
+#title {
+    position: relative;
+    left: 100px;
+    font-family: Oswald;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+
+#title a {
+    text-decoration: none;
+    color: var(--titleColor);
+    transition: 0.6s;
+}
+
+#title:hover,
+#title a:hover {
+    transform: scale(1.1);
+    color: var(--titleHoverColor);
+}
+
+ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    position: relative;
+    left: 500px;
+    font-size: 25px;
+    font-weight: 100;
+    margin: 0 15px;
+    list-style: none;
+    transition: 0.6s;
+}
+
+.menu a {
+    color: var(--menuColor);
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.menu:hover,
+.menu a:hover {
+    transform: scale(1.1);
+    color: var(--menuHoverColor);
+}
+
+.btn {
+    position: relative;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    border: solid 3px;
+    border-radius: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Oswald;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    border-color: var(--btnBorderColor);
+    color: var(--btnTextColor);
+    background: var(--btnBgColor);
+}
+
+.light-theme {
+    transition: 0.6s;
+    --bgColor : var(--white);
+    --headerBg : none;
+    --titleColor : var(--black);
+    --titleHoverColor: var(--blue);
+    --menuColor : var(--black);
+    --menuHoverColor : var(--blue);
+    --btnTextColor: var(--green);
+    --btnBorderColor: var(--green);
+    --btnBgColor: var(--black);
+}
+
+.dark-theme {
+    transition: 0.6s;
+    --bgColor : var(--black);
+    --headerBg : none;
+    --titleColor : var(--white);
+    --titleHoverColor: var(--green);
+    --menuColor : var(--white);
+    --menuHoverColor : var(--green);
+    --btnTextColor: var(--blue);
+    --btnBorderColor: var(--blue);
+    --btnBgColor: var(--white);
+}
