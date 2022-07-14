@@ -21,6 +21,7 @@ body {
     --headerBg: var(--white);
     --headerTextColor: var(--white);
     --headerHoverColor: var(--blue);
+    --headerShadowColor: var(--black);
     --stickyTextColor: var(--black);
     --btnTextColor: var(--green);
     --btnBorderColor: var(--green);
@@ -34,6 +35,7 @@ body {
     --headerBg: var(--black);
     --headerTextColor: var(--black);
     --headerHoverColor: var(--green);
+    --headerShadowColor: var(--white);
     --stickyTextColor: var(--white);
     --btnTextColor: var(--blue);
     --btnBorderColor: var(--blue);
@@ -62,6 +64,7 @@ header.sticky {
 header.sticky #title a,
 header.sticky .menu a {
     color: var(--stickyTextColor);
+    text-shadow: none;
 }
 
 header.sticky #title a:hover,
@@ -84,7 +87,7 @@ header.sticky .menu a:hover {
     text-decoration: none;
     color: var(--headerTextColor);
     transition: 0.6s;
-    text-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 5px var(--headerShadowColor);
 }
 
 #title:hover,
@@ -112,7 +115,7 @@ ul {
 
 .menu a {
     color: var(--headerTextColor);
-    text-shadow: 0px 0px 3px var(--black);
+    text-shadow: 0px 0px 3px var(--headerShadowColor);
     text-decoration: none;
     transition: 0.6s;
 }
@@ -184,7 +187,7 @@ ul {
     font-family: Oswald; 
     font-weight: 900;
     text-transform: uppercase;
-    color: --headerTextColor;
+    color: var(--white);
     font-size: 3em;
     text-shadow: 0px 0px 10px var(--headerHoverColor);
 }
@@ -225,6 +228,7 @@ ul {
 }
 
 #about-title {
+    transition: 0.6s;
     position: relative;
     bottom: 50px;
     color: var(--white);
@@ -240,7 +244,7 @@ ul {
     margin-left: 500px;
     margin-right: 500px;
     color: var(--white);
-    text-shadow: 1px 1px 0px var(--black);
+    text-shadow: 0px 0px 10px var(--black);
     font-family: Oswald;
     font-size: 2em;
 }
