@@ -77,12 +77,14 @@ header.sticky .menu a:hover {
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.6s;
+    letter-spacing: 2px;
 }
 
 #title a {
     text-decoration: none;
     color: var(--headerTextColor);
     transition: 0.6s;
+    text-shadow: 0px 0px 5px black;
 }
 
 #title:hover,
@@ -110,6 +112,7 @@ ul {
 
 .menu a {
     color: var(--headerTextColor);
+    text-shadow: 0px 0px 3px var(--black);
     text-decoration: none;
     transition: 0.6s;
 }
@@ -194,7 +197,7 @@ ul {
     cursor: default;
     transition: 0.6s;
     position: relative;
-    bottom: 85px;
+    bottom: 75px;
     font-family: Orbitron;
     color: var(--white);
     font-size: 1.5em;
@@ -219,6 +222,27 @@ ul {
 
 #myself-image:hover {
     transform: scale(1.1);
+}
+
+#about-title {
+    position: relative;
+    bottom: 50px;
+    color: var(--white);
+    font-family: Orbitron;
+    font-family: 4em;
+    text-shadow: 0px 0px 10px var(--headerHoverColor);
+    text-transform: uppercase;
+}
+
+#about-text {
+    position: absolute;
+    top: 710px;
+    margin-left: 500px;
+    margin-right: 500px;
+    color: var(--white);
+    text-shadow: 1px 1px 0px var(--black);
+    font-family: Oswald;
+    font-size: 2em;
 }
 
 .copyright {
