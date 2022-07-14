@@ -5,7 +5,7 @@
     --black: #000000;
     --white: #FFFFFF;
     --green: #00FF00;
-    --blue: #ff0000;
+    --blue: #0000ff;
     --bgImage: url('images/gif.gif');
 }
 
@@ -18,10 +18,10 @@ body {
 .light-theme {
     transition: 0.6s;
     --bgColor: var(--white);
-    --headerBg: var(--black);
-    --headerTextColor: var(--black);
+    --headerBg: var(--white);
+    --headerTextColor: var(--white);
     --headerHoverColor: var(--blue);
-    --stickyTextColor: var(--white);
+    --stickyTextColor: var(--black);
     --btnTextColor: var(--green);
     --btnBorderColor: var(--green);
     --btnBgColor: var(--black);
@@ -30,10 +30,11 @@ body {
 .dark-theme {
     transition: 0.6s;
     --bgColor: var(--black);
-    --headerBg: var(--white);
-    --headerTextColor: var(--white);
+    --bgTextColor: var(--white);
+    --headerBg: var(--black);
+    --headerTextColor: var(--black);
     --headerHoverColor: var(--green);
-    --stickyTextColor: var(--black);
+    --stickyTextColor: var(--white);
     --btnTextColor: var(--blue);
     --btnBorderColor: var(--blue);
     --btnBgColor: var(--white);
@@ -236,5 +237,5 @@ ul {
     transition: 0.6s;
     font-size: 1.3em;
     font-weight: 700;
-    color: var(--headerTextColor);
+    color: var(--bgTextColor);
 }
