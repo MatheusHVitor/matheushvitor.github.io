@@ -141,7 +141,7 @@ ul {
     text-transform: uppercase;
     background: var(--bgColor);
     border: solid 5px;
-    border-radius: 10px;
+    border-radius: 100px;
     border-color: var(--headerHoverColor);
     width: 180px;
     height: 65px;
