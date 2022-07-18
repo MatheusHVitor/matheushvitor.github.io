@@ -11,7 +11,7 @@
   * switcher = button reference
   * document.querySelector = css selector
   */
- const switcher = document.querySelector('.btn');
+ const switcher = document.querySelector('.btn-theme');
  /**
   * addEventListener = listen event
   * funcition() = action

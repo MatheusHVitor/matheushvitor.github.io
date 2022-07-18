@@ -55,8 +55,6 @@ header {
     z-index: 100000;
 }
 
-
-
 header.sticky {
     background: var(--headerBg);
 }
@@ -94,6 +92,7 @@ header.sticky .menu a:hover {
 #title a:hover {
     transform: scale(1.1);
     color: var(--headerHoverColor);
+    text-shadow: none;
 }
 
 ul {
@@ -124,9 +123,45 @@ ul {
 .menu a:hover {
     transform: scale(1.1);
     color: var(--headerHoverColor);
+    text-shadow: none;
 }
 
-.btn {
+#s-curriculo {
+    position: relative;
+    color: white;
+    top: 450px;
+    font-family: Oswald;
+}
+
+.btn-curriculo {
+    position: relative;
+    top: 460px;
+    font-family: Oswald;
+    font-size: 2em;
+    text-transform: uppercase;
+    background: var(--bgColor);
+    border: solid 5px;
+    border-radius: 10px;
+    border-color: var(--headerHoverColor);
+    width: 180px;
+    height: 65px;
+    text-align: center;
+    line-height: 0px;
+    transition: 0.6s;
+}
+
+.btn-curriculo a {
+    color: var(--headerHoverColor);
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.btn-curriculo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btn-theme {
     position: relative;
     right: 100px;
     width: 3em;
@@ -140,7 +175,7 @@ ul {
     transition: 0.6s;
 }
 
-.btn:hover {
+.btn-theme:hover {
     cursor: pointer;
     transform: scale(1.2);
     border-color: var(--btnBorderColor);
@@ -162,7 +197,7 @@ ul {
     bottom: 0;
     left: 0;
     right: 0;
-    min-height: 100%;
+    min-height: 100vh;
     min-width: 100%;
     overflow: hidden;
     overflow-x: hidden;
