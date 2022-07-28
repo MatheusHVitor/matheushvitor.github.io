@@ -230,7 +230,7 @@ ul {
     border-color: var(--headerHoverColor);
     width: 350px;
     height: 350px;
-    box-shadow: 3px 3px 25px #000;
+    box-shadow: 3px 3px 15px #000;
 }
 
 #myself-image:hover {
@@ -323,7 +323,7 @@ ul {
     text-decoration: none;
     border-radius: 100%;
     transition: 0.6s;
-    box-shadow: 3px 3px 25px #000;
+    box-shadow: 3px 3px 3px #000;
 }
 
 .fa:hover {
@@ -362,4 +362,16 @@ ul {
     width: 350px;
     border-radius: 25px;
     box-shadow: 3px 3px 25px #000;
+}
+
+.img-projects:hover {
+    transform: scale(1.1);
+}
+
+.ability {
+    transition: 0.6s;
+}
+
+.ability:hover {
+    transform: scale(1.2)
 }
